@@ -1,0 +1,91 @@
+/*\Layout*/
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}
+
+/*Form*/
+.field {
+  margin-bottom: 1.2rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--field-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: var(--text);
+  font: inherit;
+}
+
+.field select option {
+  color: #000;
+}
+
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+  border-color: var(--error);
+}
+
+.error {
+  display: block;
+  min-height: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--error);
+}
+
+.consent {
+  display: flex;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.success {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--emerald);
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.success.show {
+  display: block;
+}
+
+/*Details*/
+.info p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.info strong {
+  color: var(--text);
+  display: block;
+}
+
+/*Map inside details card*/
+.info .map {
+  height: 280px;
+  border-radius: 12px;
+}
+
+.map-link {
+  margin: 0.8rem 0 0;
+}

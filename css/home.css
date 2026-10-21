@@ -1,0 +1,108 @@
+/*Hero*/
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg, rgba(3, 20, 15, 0.95) 25%, rgba(4, 120, 87, 0.35));
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  line-height: 1.1;
+  max-width: 14ch;
+  margin-bottom: 1.2rem;
+  color: #ecfdf5;
+}
+
+.hero p {
+  color: #cfe5da;
+  max-width: 45ch;
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+}
+
+/*Stats*/
+.stats {
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 3rem;
+  color: var(--emerald);
+}
+
+/*Testimonial slider*/
+.slider {
+  overflow: hidden;
+  padding: 0; /* padding moves to .slide / .dots so neighbouring slides can't peek through */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1.75rem 1.75rem 0;
+  text-align: center;
+}
+
+.slide p {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.slide span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  padding-bottom: 1.75rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--glass-border);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--emerald);
+}
+
+/*CTA*/
+.cta {
+  text-align: center;
+}

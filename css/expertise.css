@@ -1,0 +1,126 @@
+/*Practice areas */
+.area {
+  scroll-margin-top: 110px;
+  margin-bottom: 1.5rem;
+}
+
+.area h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.area p {
+  color: var(--muted);
+}
+
+/*FAQ accordion*/
+.faq-item {
+  margin-bottom: 0.8rem;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.4rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.4rem;
+  color: var(--muted);
+  transition: max-height 0.4s, padding 0.4s;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 1rem 1.4rem;
+}
+
+/*Expandable practice areas*/
+.area h2 {
+  margin-bottom: 0.3rem;
+}
+
+.area-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--emerald);
+  border-radius: 50%;
+  color: var(--emerald);
+  font-family: var(--font-body);
+  transition: transform 0.4s, background 0.3s, color 0.3s;
+}
+
+.area.open .icon {
+  transform: rotate(135deg);
+  background: var(--emerald);
+  color: var(--btn-text);
+}
+
+/* Smooth open / close without a fixed height */
+.area-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease;
+}
+
+.area.open .area-body {
+  grid-template-rows: 1fr;
+}
+
+.area-inner {
+  overflow: hidden;
+}
+
+.area-inner ul {
+  margin: 1.2rem 0 1.4rem 1.2rem;
+  color: var(--muted);
+}
+
+.area-inner li::marker {
+  color: var(--emerald);
+}
+
+/*Overview cards*/
+.service {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.service h3 {
+  margin-bottom: 0.4rem;
+}
+
+.service p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
